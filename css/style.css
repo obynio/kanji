@@ -129,7 +129,8 @@ footer > div > section:first-of-type {
 	flex: 1 1 auto;
 	margin-left: 0px;
 	font-size: 14px;
-    color: #263238;
+	color: #263238;
+	margin-top: 20px;
 }
 
 footer h3 {
