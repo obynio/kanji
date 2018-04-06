@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.29" />
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Drone is a simple and powerful Continuous Delivery platform, designed for containers.">
+	<meta name="author" content="Brad Rydzewski"> 
+    <title>Drone Blog</title>
+    <!--
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="shortcut icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="shortcut icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    -->
+    <link href="css/reset.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	
+	
+</head>
+<body
+	data-site-id="drone-blog"
+	data-page-id=""
+	data-page-kind="home"
+	data-page-file=""
+	data-page-dir="">
+
+	<header>
+		<div>
+			<div class="logo">
+				<a href="/">
+                    <svg version="1.1" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m164.38 0.01c-92.054 7.9266-164.38 85.717-164.38 179.81 0 99.36 80.64 180 180 180s180-80.64 180-180c0.0394-5.7835-0.32391-11.558-0.84375-17.312-5.278-32.97-35.364-69.688-85.156-69.688-42.028 0-66.5 26.239-66.5 57 0 23.005 13 39 34.5 39 34.507 0 42-40.5 24-57 24.691 16.056 21.5 40.25 21.5 40.25 0 48.013-42.982 102.62-114 102.62-79.513 0-119.5-68.873-119.5-123.38 0-42.34 27.159-116.53 110.38-151.31z" fill="#2a5099"/>
+                        <path d="m215 7.76c-47.529 0-67 30.306-67 56 0 31.309 21.085 40.031 34 40.031 20.522 0 33-17.643 33-33.469 0-10.072-3.0751-15.166-3.8438-16.281 18.625 13.5 23.812 29.812 23.812 29.812s9.0393-8.0312 38.625-8.0312c17.564 0 45.875 4.2188 68.375 25.969-25.695-55-80.252-94.031-126.97-94.031zm-141.5 122s-3.5625 10.311-3.5625 26.062c0 55.284 43.772 103.5 105.06 103.5 44.658 0 80.969-28 95.969-65.5 0.458-1.9628-7.7443 11-29.75 11-22.522 0-34.719-14.031-34.719-14.031s-17.749 14.969-48.5 14.969c-56.612 0-84.5-48.138-84.5-76z" fill="#2c9eda"/>
+                    </svg>
+                </a>
+                <p style="font-size: 22px; margin-left:10px;">obynio's blog</p>
+			</div>
+			<ul>
+				<li>
+                    
+                    <a href="https://drone.io/enterprise">GitHub</a>
+				</li>
+				<li>
+					<a href="https://github.com/drone">LinkedIn</a>
+				</li>
+				<li>
+					<a href="http://docs.drone.io" class="goto">Resume</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	
+	<main>
+		<article>
+			<header>
+				<h1>Announcing Drone Autoscale</h1>
+				<div>
+					<address>
+						<a rel="author" href="https://twitter.com/bradrydzewski" target="_blank">
+							bradrydzewski
+						</a>
+					</address> 
+					<time>March 8, 2018</time>
+				</div>
+            </header>
+            
+            <br/>
+			
+			<div>
+				
+
+<p>Today we&rsquo;re excited to announce the launch of <strong>Drone Autoscale</strong>. Drone Autoscale is a standalone daemon that continuously polls your build queue and provisions or terminates instances based on volume. Our goal is to increase your capacity when you need it, while <strong>lowering your monthly server bills</strong>.</p>
+
+<p>This is great, right? But how is it different than existing solutions? The biggest difference is integration and intelligence. Drone will never terminate your server mid-build, or worse, mid-deployment. And if it determines your environment is in an inconsistent state, it will repair things. <strong>Automatically</strong>.</p>
+
+<h2 id="cloud-providers">Cloud Providers</h2>
+
+<p>Drone Autoscale is architected to integrate with multiple hosting providers. This initial release includes support for <a href="https://m.do.co/c/00500d28741b">DigitalOcean</a> and alpha support for <a href="http://autoscale.drone.io/intro/amazon/">Amazon EC2</a>. Support for Google Cloud Platform, Microsoft Azure, and Hetzner Cloud are in-progress.</p>
+
+<h1 id="notifications">Notifications</h1>
+
+<p>Drone Autoscale integrates with Slack to notify your team when instances are provisioned and terminated.</p>
+
+<h2 id="command-line-tools">Command Line Tools</h2>
+
+<p>The <a href="https://github.com/drone/drone-cli">command line tools</a> have been updated and include commands for working with the autoscale server. You can now inspect and manage remote instances from the terminal:</p>
+
+<div class="terminal lite">
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>
+<pre>
+$ drone server ls
+agent-807jVFwj
+agent-IOOsCNd7
+agent-hNhs08tj
+agent-TiefPo1u
+
+$ drone server info agent-TiefPo1u
+Name:    agent-TiefPo1u
+Address: 52.3.250.114
+Region:  us-east-1e
+Size:    t2.medium
+State:   running
+</pre>
+</div>
+
+<p>Sometimes you need to quickly inspect a remote instance. The command line tools help you easily connect to the remote docker daemon:</p>
+
+<div class="terminal lite">
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>
+<pre>
+$ eval $(drone server env agent-TiefPo1u)
+$ docker ps -a
+CONTAINER ID        IMAGE                   STATUS      
+b6aeabe2836f        drone/agent:0.8         2 days ago  
+</pre>
+</div>
+
+<p>Not quite ready for automated scaling? Not a problem. You can always run the autoscaler in manual mode and provision and terminate instances from the command line.</p>
+
+<div class="terminal lite">
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>
+<pre>
+$ drone server create
+Name:    agent-TiefPo1u
+Address: 52.3.250.114
+Region:  us-east-1e
+Size:    t2.medium
+State:   pending
+
+$ drone server destroy agent-TiefPo1u
+Name:    agent-TiefPo1u
+State:   shutdown
+</pre>
+</div>
+
+<h2 id="commercial-license">Commercial License</h2>
+
+<p>Drone Autoscale is distributed under a freemium license. If you are interested in purchasing a commercial license, which includes enterprise support and access to our private Slack channel, please contact our <a href="mailto:sales@drone.io">sales team</a>.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>Find out more about how to use Drone Autoscale for cost effective and scalable Continuous Delivery with the following resources:</p>
+
+<ul>
+<li><a href="https://github.com/drone/autoscaler">Repository</a></li>
+<li><a href="https://autoscale.drone.io">Documentation</a></li>
+<li><a href="http://autoscale.drone.io/intro/">Installation</a></li>
+<li><a href="https://discourse.drone.io">Support</a></li>
+</ul>
+
+<p>We’ll be adding new features and integrations over the coming weeks and months and look forward to <a href="https://twitter.com/droneio">hearing your feedback</a>!</p>
+
+			</div>
+		</article>
+	</main>
+	
+	<footer>
+		<div>
+			<section>
+                    <img src="img/sign.png">
+
+            </section>
+			<section>
+					<ul>
+                            <li>
+                                    <a href="https://discourse.drone.io/" target="_blank">
+                                        <svg aria-labelledby="simpleicons-discourse-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-discourse-icon">Discourse icon</title><path d="M12.103 0C18.666 0 24 5.485 24 11.997c0 6.51-5.33 11.99-11.9 11.99L0 24V11.79C0 5.28 5.532 0 12.103 0zm.116 4.563c-2.593-.003-4.996 1.352-6.337 3.57-1.33 2.208-1.387 4.957-.148 7.22L4.4 19.61l4.794-1.074c2.745 1.225 5.965.676 8.136-1.39 2.17-2.054 2.86-5.228 1.737-7.997-1.135-2.778-3.84-4.59-6.84-4.585h-.008z"></path></svg>
+                                        Discourse
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://dronesupport.slack.com/" target="_blank">
+                                        <svg aria-labelledby="simpleicons-slack-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-slack-icon">Slack icon</title><path d="M9.879 10.995l1.035 3.085 3.205-1.074-1.035-3.074-3.205 1.08v-.017z"></path><path d="M18.824 14.055l-1.555.521.54 1.61c.218.65-.135 1.355-.786 1.574-.15.045-.285.067-.435.063-.511-.015-.976-.338-1.155-.849l-.54-1.607-3.21 1.073.539 1.608c.211.652-.135 1.358-.794 1.575-.15.048-.285.067-.435.064-.51-.015-.976-.34-1.156-.85l-.539-1.619-1.561.524c-.15.045-.285.061-.435.061-.511-.016-.976-.345-1.155-.855-.225-.66.135-1.364.78-1.575l1.56-.525L7.5 11.76l-1.551.525c-.141.048-.285.066-.428.064-.495-.016-.975-.338-1.141-.848-.209-.65.135-1.354.796-1.574l1.56-.52-.54-1.605c-.21-.654.136-1.359.796-1.575.659-.22 1.363.136 1.574.783l.539 1.608L12.3 7.544l-.54-1.605c-.209-.645.135-1.35.789-1.574.652-.211 1.359.135 1.575.791l.54 1.621 1.555-.51c.651-.219 1.356.135 1.575.779.218.654-.135 1.359-.784 1.575l-1.557.524 1.035 3.086 1.551-.516c.652-.211 1.358.135 1.575.795.22.66-.135 1.365-.779 1.574l-.011-.029zm4.171-5.356C20.52.456 16.946-1.471 8.699 1.005.456 3.479-1.471 7.051 1.005 15.301c2.475 8.245 6.046 10.17 14.296 7.694 8.245-2.475 10.17-6.046 7.694-14.296z"></path></svg>
+                                        Slack
+                                    </a>
+                                </li>
+					</ul>
+			</section>
+			<section>
+				<ul>
+					<li>
+						<a href="https://github.com/drone" target="_blank">
+							<svg aria-labelledby="simpleicons-github-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-github-icon">GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+							GitHub
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/droneio" target="_blank">
+							<svg aria-labelledby="simpleicons-twitter-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-twitter-icon">Twitter icon</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"></path></svg>
+							Twitter
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</footer>
+</body>
+</html>

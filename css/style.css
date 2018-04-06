@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto+Mono');
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Noto Sans';
+	font-size: 15px;
+	color: #263238;
+}
+
+body > main {
+	max-width: 600px;
+	margin: 60px auto;
+	flex: 1 1 auto;
+}
+
+/*
+ * CATEGORY LIST
+ */
+
+aside {
+	border-bottom: 1px solid #EEE;
+}
+
+aside ul {
+	max-width: 900px;
+	margin: 0px auto;
+	padding: 24px 0px;
+}
+
+aside ul li:first-of-type:after {
+	content: ":";
+}
+
+aside ul li {
+	display: inline-block;
+	margin-right: 18px;
+}
+
+aside ul li a {
+	color: #0091EA;
+	text-decoration: none;
+}
+
+/*
+ * HEADER
+ */
+
+body > header {
+	border-bottom: 1px solid #EEE;
+	padding: 16px 0px;
+}
+
+body > header > div {
+	max-width: 900px;
+	margin: 0px auto;
+	display: flex;
+}
+
+header .logo {
+	align-items: center;
+    display: flex;
+    flex: 1;
+}
+
+header .logo a {
+	color: #263238;
+	text-decoration: none;
+}
+
+header .logo svg {
+    fill: #263238;
+    width: 30px;
+}
+
+body > header ul {
+    display: flex;
+    flex: 0;
+}
+
+body > header li {
+    align-items: center;
+    display: flex;
+    margin-left: 24px;
+}
+
+body > header a {
+    color: #263238;
+	text-decoration: none;
+	white-space: nowrap;
+	display: flex;
+    align-items: center;
+}
+
+body > header li a svg {
+	width: 24px;
+    height: 24px;
+    margin-left: 12px;
+}
+
+/*
+ * FOOTER
+ */
+
+footer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	/* background: #ECEFF1; */
+	background-color: #f6f8f9;
+}
+
+footer > div {
+	max-width: 900px;
+	margin: 0px auto;
+	display: flex;
+	flex-direction: row;
+}
+
+footer > div > section {
+	margin-left: 90px;
+}
+
+footer > div > section:first-of-type {
+	flex: 1 1 auto;
+	margin-left: 0px;
+	font-size: 14px;
+    color: #263238;
+}
+
+footer h3 {
+	color: #263238;
+	margin-bottom: 40px;
+	font-size: 14px;
+}
+
+footer a {
+	display: flex;
+    align-content: center;
+    margin: 20px 0px;
+	/* color: #455A64; */
+	color: #263238;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+footer svg {
+    /* fill: #455A64; */
+	fill: #263238;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+article > img {
+	max-width: 100%;
+	border-radius: 3px;
+	margin: 60px 0px;
+}
+
+article p {
+	margin: 30px 0px;
+	line-height: 24px;
+}
+
+article header h1 {
+	font-size: 32px;
+	margin-bottom: 12px;
+	line-height: 1.2;
+}
+
+article header address {
+	display: inline-block;
+}
+
+article header address:before {
+	content: "By";
+}
+
+article header time {
+	display: inline-block;
+}
+
+article header time:before {
+	content: "on";
+	margin-right: 6px;
+}
+
+article > div {
+	/* -webkit-font-smoothing: antialiased; */
+}
+
+article > div strong,
+article > div b {
+	font-weight: bold;
+}
+
+article > div > h1,
+article > div > h2 {
+	font-size: 24px;
+	margin-top: 60px;
+}
+
+article p:first-of-type {
+	margin-top: 0px;
+}
+
+article a,
+article a:visited {
+	color: #0091EA;
+	text-decoration: none;
+}
+
+
+article ul {
+	margin: 30px 0px;
+	margin-left: 36px;
+}
+
+article ul li {
+	list-style: disc;
+	margin: 8px 0px;
+	padding-left: 6px;	
+}
+
+article > div img {
+	max-width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 42px;
+	border-radius: 5px;
+	margin: 18px 30px;
+	width: calc(100% - 60px);
+}
+
+/*
+ * TERMINAL
+ */
+
+ .terminal {
+    background: #151718;
+	border-radius: 5px;
+	margin: 0px 30px;
+	margin-top: 36px;
+	margin-bottom: 60px;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 20px 68px;
+	padding: 18px 18px 18px 18px;
+	
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 42px
+}
+
+.terminal pre {
+    padding-top: 24px;
+    color: rgba(255,255,255,0.9);
+    font-family: "Roboto Mono";
+    font-size: 13px;
+    line-height: 18px;
+	-webkit-font-smoothing: antialiased;
+	min-width: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.terminal.lite {
+    background: #FFF;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 42px
+}
+
+.terminal.lite  pre {
+    background: #FFF;
+	color: #000;
+	font-family: menlo, "Roboto Mono";
+}
+
+
+
+
+
+
+@media screen and (max-width: 950px) {
+	body > main,
+	body > aside  > div,
+	body > header > div {
+		margin-left: 24px;
+		margin-right: 24px;
+	}
+	body > header ul > li {
+		display: none;
+	}
+	body > header ul > li:last-of-type {
+		display: block;
+	}
+	footer {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body > aside ul > li {
+		display: block;
+		margin-bottom: 12px;
+	}
+}
