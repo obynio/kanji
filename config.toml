@@ -1,0 +1,4 @@
+baseurl = "https://obyn.io"
+languageCode = "en-us"
+title = "obynio's blog"
+MetaDataFormat = "toml"
