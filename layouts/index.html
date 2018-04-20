@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+{{ range first 10 .Data.Pages }}
+
+<div class="post">
+  <a href="{{ .Permalink }}">{{ .Title }}</a>
+  <aside class="dates">{{ .Date.Format "Mon, Jan 2, 2006" }}</aside>
+  <summary>{{ .Summary }}
+  </summary>
+</div>
+
+{{ end }}
+{{ partial "footer.html" . }}

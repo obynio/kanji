@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+
+<header>
+  <h1>{{ .Title }}</h1>
+  <div>
+    <address>
+      <a rel="author" href="https://github.com/obynio" target="_blank">
+        obynio
+      </a>
+    </address>
+    <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+  </div>
+</header>
+
+<br/>
+
+<div>
+  {{ .Content }}
+</div>
+
+{{ partial "footer.html" . }}
