@@ -1,6 +1,6 @@
 ---
 title: "Reverse on zeroshell authentication"
-date: 2018-04-20T09:58:18+02:00
+date: 2015-06-13T23:42:00+02:00
 draft: false
 ---
 
