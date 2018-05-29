@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto+Mono');
 
+html {
+	overflow-y: scroll;
+}
+
 html, body {
 	height: 100%;
 	width: 100%;
@@ -68,12 +72,6 @@ body > header a {
 	white-space: nowrap;
 	display: flex;
     align-items: center;
-}
-
-body > header li a svg {
-	width: 24px;
-    height: 24px;
-    margin-left: 12px;
 }
 
 /* FOOTER */
@@ -192,8 +190,9 @@ article code {
 	font-family: "Roboto Mono";
 	background: #f4f4f4;
 	font-size: 13px;
-	line-height:20px;
-	display:inline-block;
+	line-height: 20px;
+	word-wrap: break-word;
+	color: #E91E63;
 }
 
 /* TERMINAL */
