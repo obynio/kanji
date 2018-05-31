@@ -4,7 +4,7 @@ date: 2016-01-02T23:42:00+02:00
 draft: false
 ---
 
-My mailbox is located about 200 meters from my house and I must check for mail every day. So I put my hands dirty and create an SMS notifier with Arduino in order to know when I receive mail.
+My mailbox is located about 200 meters from my house and I must check for new mails every day. So I put my hands dirty and create an SMS notifier with Arduino.
 
 <!--more-->
 
@@ -22,7 +22,7 @@ The LED and the photoresistor create a barrier in the mailbox. When a mail arriv
 
 # The AT protocol
 
-I was disappointed when I saw that the shield wasn't compatible with the official Arduino GSM library and that it used it's own protocol instead. Indeed, in order to communicate with the SIM900 modem by Simcom, you must use AT commands. 
+I was disappointed when I saw that the shield wasn't compatible with the official Arduino GSM library and that it used its own protocol instead. Indeed, in order to communicate with the SIM900 modem by Simcom, you must use AT commands. 
 
 On the hardware side, the communication between the Arduino and the SIM900 shield is achieved by a TX/RX transmission on PIN7 and PIN8 of the Arduino (19200 bauds by default). On the software side, you can use the SoftwareSerial library provided by default and the [AT commands](http://simcom.ee/documents/SIM900/SIM900_AT%20Command%20Manual_V1.11.pdf). 
 
@@ -32,7 +32,7 @@ For example, if you wish to make phone call:
 ATD + +336XXXXXXXX
 ```
 
-If you wish to send an SMS, choose the GSM network and do not forget to enable text mode over PDU (or binary) mode.
+If you wish to send an SMS, choose the GSM network and do not forget to enable the text mode over PDU.
 
 ```sql
 AT+CSCS="GSM"           -- Use GSM network
@@ -41,7 +41,7 @@ AT+CMGS="18576608994"   -- Set the number
 > A test message        -- Your text message
 ```
 
-# It's over !
+# Conclusion
 
 Once done, just upload the program to the Arduino and be happy about the result :)
 You can take a look at my work [on my github](https://github.com/obynio/postman). 
