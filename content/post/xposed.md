@@ -4,18 +4,18 @@ date: 2016-01-02T23:42:00+02:00
 draft: false
 ---
 
-I was wondering how the Android runtime was working and if we can hack it to make it execute custom code. It turns out that there is a tool that does the job : Xposed. It's a framework that allows to tweak on-the-fly the Android runtime.
+I was wondering how the Android runtime was working and if we can hack it to make it execute custom code. It turns out that there is a tool that does the job for you, Xposed. It's a framework that allows to tweak on-the-fly the Android runtime.
 
 <!--more-->
 
-# Here's Johny
+# Nuit de l'Info
 
 Recently, I gave a talk about that subject in Paris during a french event called [La Nuit de l'Info](http://www.nuitdelinfo.com/). You can watch it on [YouTube](https://www.youtube.com/watch?v=DDF70hg8WY8) and review [my slides](https://pool.obyn.io/impress/xposed/). 
 
 {{< youtube DDF70hg8WY8 >}}
 
 
-# Go ahead, make my day
+# Explain me like I'm five
 
 Basically, Xposed allows you to run some custom code before and after any functions. It's a process called hooking. No APK is modified, all the changes take place in memory. Of course, Android does not allow such an operation natively and you must install the Xposed framework on your device. 
 
@@ -29,7 +29,7 @@ Let's explain how Xposed works. While starting, Android will go through several 
 
 Its name is a fun reference to a biological process: "It is the initial cell formed when a new organism is produced". Indeed, Zygote is a daemon whose goal is to launch apps and consequently is the parent of any Android process. Zygote creates a Dalvik machine during startup and loads all necessary Java classes and resources. Then when an app starts, it creates a "fork" of that Dalvik machine and runs the app inside. 
 
-Thus, the applications are partitioned from each other, which improves the security and the memory management. The aim of Xposed is to launch a custom app_process binary which contains a custom jar that allows us to the Java reflection principle. Then you just won the war. You're now able to hook any function of the Android API.
+Thus, the applications are partitioned from each other, which improves the security and the memory management. The aim of Xposed is to launch a custom app_process binary which contains a custom jar that allows us to the java reflection. Then you just won the war. You're now able to hook any function of the Android API.
 
 # How to use it ?
 
