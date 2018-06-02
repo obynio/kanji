@@ -1,0 +1,16 @@
+pipeline:
+  build:
+    image: cbrgm/drone-hugo:latest
+    validate: true
+    output: kanji
+    url: https://obyn.io
+  deploy:
+    image: drillster/drone-rsync
+    hosts: obyn.io
+    source: kanji/*
+    target: /srv/http/kanji
+    recursive: true
+    delete: true
+    secrets: [ rsync_user, rsync_key ]
+    when:
+      branch: [ master ]
