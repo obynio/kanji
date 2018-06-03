@@ -246,7 +246,7 @@ article code {
 }
 
 .post aside {
-	float: right;
+	margin-top: 10px;
 }
 
 .post summary {
