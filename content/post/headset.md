@@ -8,7 +8,7 @@ I recently had a discussion with a friend, and we talked about bluetooth headset
 
 <!--more-->
 
-This feature seemed quite usefull and I was a bit jealous not having the same on Android. So I decided to do some reverse engineering of my bluetooth headset, the [Bose Soundlink II](https://www.bose.com/en_us/products/headphones/over_ear_headphones/soundlink-around-ear-wireless-headphones-ii.html), to create a sort of battery notifier for my Android.
+This feature seemed quite useful and I was a bit jealous not having the same on Android. So I decided to do some reverse engineering of my bluetooth headset, the [Bose Soundlink II](https://www.bose.com/en_us/products/headphones/over_ear_headphones/soundlink-around-ear-wireless-headphones-ii.html), to create a sort of battery notifier for my Android.
 
 # Analysis
 
@@ -41,7 +41,7 @@ SPP 19 Sent "\001\003\002\001\001"
 
 It seems that the headset interacts with my Android via serial port commands. These device-specific codes aren't very helpful, so I took a closer look by decompiling the official Android app provided by the manufacturer which is, of course, obfuscated by proguard. 
 
-However, I managed to extract usefull informations and to group them in the following image. After a few attempts, I managed to successfully communicate with my headset. 
+However, I managed to extract useful informations and to group them in the following image. After a few attempts, I managed to successfully communicate with my headset. 
 
 ![Reverse diagram](/img/headset/reverse.jpg)
 
