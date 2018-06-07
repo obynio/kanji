@@ -1,7 +1,7 @@
 ---
 title: "Let's Encrypt wildcard certificate on Gandi"
 date: 2018-06-06T23:42:00+02:00
-draft: true
+draft: false
 ---
 
 Recently, Let's Encrypt began issuing wildcard certificates using ACME v2. Wildcard certificates allow users to use the same SSL certificate for all the subdomains of a domain. That's much more convenient that generating a separate certificate for each subdomain.
