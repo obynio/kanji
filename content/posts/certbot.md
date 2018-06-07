@@ -20,12 +20,10 @@ The second solution seems much more convenient. My DNS provider, Gandi, is provi
 
 Thus I adapted an existing certbot plugin to use the v5 LiveDNS API. Just install the plugin using `pip`, put your Gandi API key in the config and you're good to go.
 
-`certbot certonly -a certbot-plugin-gandi:dns --certbot-plugin-gandi:dns-credentials gandi.ini -d domain.com -d \*.domain.com --server https://acme-v02.api.letsencrypt.org/directory`
+{{< terminal >}}
+$ certbot certonly -a certbot-plugin-gandi:dns --certbot-plugin-gandi:dns-credentials gandi.ini -d domain.com -d \*.domain.com
+
+IMPORTANT NOTES:
+Congratulations! Your certificate and chain have been saved at /etc/letsencrypt/live/domain.com{{< /terminal >}}
 
 Feel free to take a look a [my work](https://github.com/obynio/certbot-plugin-gandi).
-
-# Automatic renewal
-
-As Let's Encrypt certificates are due to renewal every 3 months, just setup a `crontab` job for weekly renewal.
-
-`* 1 * * 1 certbot renew -q -a certbot-plugin-gandi:dns --certbot-plugin-gandi:dns-credentials /etc/letsencrypt/gandi/gandi.ini --server https://acme-v02.api.letsencrypt.org/directory`
