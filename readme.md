@@ -4,7 +4,9 @@
 
 > The only source of knowledge is experience
 
-This is my personal blog and any views expressed here are mine. Get a look on [obyn.io](https://obyn.io)
+This is my personal blog and any views expressed here are mine. Get a look on [obyn.io](https://obyn.io).
+
+![blog_preview](https://user-images.githubusercontent.com/2095991/42734677-6f39bb4a-8848-11e8-81bb-c07665fd2764.png)
 
 ## Development
 
