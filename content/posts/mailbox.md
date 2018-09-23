@@ -6,8 +6,6 @@ draft: false
 
 My mailbox is located about 200 meters from my house and I must check for new mails every day. So I put my hands dirty and create an SMS notifier with Arduino.
 
-<!--more-->
-
 ![The hardware](/img/mailbox/preview.jpg)
 
 # The hardware
