@@ -6,8 +6,6 @@ draft: false
 
 For my studies, I’m living in a student residence in Paris. The residence provides a free internet connection for each resident. However, in order to gain access to it, you must login each time you want to access Internet.
 
-<!--more-->
-
 # The context
 
 This system is powered by Zeroshell, a Linux distribution for servers which aims to provide network services. Besides the fact that it keeps logs of all your activities, it also requires keeping a popup opened to maintain the access.

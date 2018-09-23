@@ -6,8 +6,6 @@ draft: false
 
 Lastly I remembered that I own a blog and figured out that writing new articles on it was not a trivial job. Thus began my journey on how to smooth and simplify the process to make it simplier for me to write new blog posts. 
 
-<!--more-->
-
 # Back in old days...
 
 > We build our computer systems the way we build our cities: without a plan, on top of ruins.

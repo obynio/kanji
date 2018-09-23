@@ -6,8 +6,6 @@ draft: false
 
 I was wondering how the Android runtime was working and if we can hack it to make it execute custom code. It turns out that there is a tool that does the job for you, Xposed. It's a framework that allows to tweak on-the-fly the Android runtime.
 
-<!--more-->
-
 # Nuit de l'Info
 
 Recently, I gave a talk about that subject in Paris during a french event called [La Nuit de l'Info](http://www.nuitdelinfo.com/). You can watch it on [YouTube](https://www.youtube.com/watch?v=DDF70hg8WY8) and review [my slides](https://pool.obyn.io/impress/xposed/). 

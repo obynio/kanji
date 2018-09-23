@@ -6,8 +6,6 @@ draft: false
 
 I recently had a discussion with a friend, and we talked about bluetooth headsets and he told me that on iOS devices, the remaining battery of the headset is shown as an icon in the notification bar.
 
-<!--more-->
-
 This feature seemed quite useful and I was a bit jealous not having the same on Android. So I decided to do some reverse engineering of my bluetooth headset, the [Bose Soundlink II](https://www.bose.com/en_us/products/headphones/over_ear_headphones/soundlink-around-ear-wireless-headphones-ii.html), to create a sort of battery notifier for my Android.
 
 # Analysis

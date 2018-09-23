@@ -6,8 +6,6 @@ draft: false
 
 Recently, Let's Encrypt began issuing wildcard certificates using ACME v2. Wildcard certificates allow users to use the same SSL certificate for all the subdomains of a domain. That's much more convenient that generating a separate certificate for each subdomain.
 
-<!--more-->
-
 However certbot wildcard certificate must be validated using a DNS-01 challenge in order to prove that you are the right domain owner. There are two ways to validate this challenge:
 
 * Either you include a `TXT` with a given validation string in your DNS fields, wait a few hours for DNS propagation and validate the challenge.
