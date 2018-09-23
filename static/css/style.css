@@ -267,15 +267,14 @@ nav span {
 }
 
 nav p {
-	margin: 10px 0px;
+	margin: 16px 0px;
 	line-height: 24px;
 	text-align: justify;
 }
 
 nav div {
     line-height: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 /* SCREENS */
