@@ -196,14 +196,14 @@ article pre {
 article pre code span,
 article pre code {
 	font-family: "Roboto Mono" !important;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 18px;
 }
 
 article code {
 	font-family: "Roboto Mono";
 	background: #f4f4f4;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 20px;
 	word-wrap: break-word;
 	color: #E91E63;
