@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:200,400,700|Roboto+Mono');
+@import url('"https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:200,400,400i');
 
 html {
 	overflow-y: scroll;
@@ -12,7 +13,7 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
-	font-family: 'Noto Sans';
+	font-family: 'Fira Sans';
 	font-size: 16px;
 	color: #263238;
 }
@@ -26,7 +27,7 @@ body > main {
 /* HEADER */
 
 body > header {
-	border-bottom: 1px solid #EEE;
+	/* border-bottom: 1px solid #EEE; */
 	padding: 16px 0px;
 }
 
@@ -71,7 +72,15 @@ body > header a {
 	text-decoration: none;
 	white-space: nowrap;
 	display: flex;
-    align-items: center;
+	align-items: center;
+	font-size: 1.1em;
+	border-bottom: 2px solid transparent;
+}
+
+body > header .active {
+	border-bottom: 2px solid #263238;
+	display: inline-block;
+  	line-height: 2;
 }
 
 /* FOOTER */
