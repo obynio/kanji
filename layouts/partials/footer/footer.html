@@ -12,8 +12,13 @@
 <footer>
     <div>
         <section>
-            <h3>Yohann Leon · <script>document.write((new Date()).getFullYear())</script>
-            </h3>
+            <h3>Yohann Leon · <script>document.write((new Date()).getFullYear())</script></h3>
+        </section>
+        <section>
+            <a href="https://github.com/obynio" target="_blank">{{ partial "footer/github.svg" (dict "fill" "#263238" "size" 18) }}</a>
+            <a href="https://www.linkedin.com/in/yohannleon" target="_blank">{{ partial "footer/linkedin.svg" (dict "fill" "#263238" "size" 18) }}</a>
+            <a href="https://www.facebook.com/yohann.leon" target="_blank">{{ partial "footer/facebook.svg" (dict "fill" "#263238" "size" 18) }}</a>
+            <a href="#" data-to="bWFpbHRvOg" data-mail="eW9oYW5uQGxlb24ucmU" onmouseover="this.href = atob(this.dataset.to) + atob(this.dataset.mail)">{{ partial "footer/mail.svg" (dict "fill" "#263238" "size" 18) }}</a>
         </section>
     </div>
 </footer>
