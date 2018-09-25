@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:200,400,700|Roboto+Mono');
-@import url('"https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans:200,400,400i');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono');
 
 html {
 	overflow-y: scroll;
@@ -13,8 +12,8 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
-	font-family: 'Fira Sans';
-	font-size: 16px;
+	font-family: 'Noto Sans';
+	font-size: 1em;
 	color: #263238;
 }
 
@@ -46,7 +45,7 @@ header .logo {
 header .logo a {
 	color: #263238;
 	text-decoration: none;
-	font-size: 22px;
+	font-size: 1.4em;
 }
 
 header .logo svg {
@@ -58,13 +57,13 @@ header .logo svg {
 
 body > header ul {
     display: flex;
-    flex: 0;
+	flex: 0;
 }
 
 body > header li {
     align-items: center;
     display: flex;
-    margin-left: 24px;
+    margin-right: 20px;
 }
 
 body > header a {
@@ -75,24 +74,33 @@ body > header a {
 	align-items: center;
 	font-size: 1.1em;
 	border-bottom: 2px solid transparent;
+	line-height: 2em;
 }
 
 body > header .active {
-	border-bottom: 2px solid #263238;
 	display: inline-block;
-  	line-height: 2;
+	border-bottom: 2px solid #263238;
+	line-height: 2em;
 }
 
 /* FOOTER */
 
 footer {
-	padding-top: 40px;
-	padding-bottom: 40px;
-	background-color: #f6f8f9;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*background-color: #f6f8f9;*/
 }
 
 footer > div {
 	text-align: center;
+}
+
+footer > div > section {
+	margin: 20px 0px;
+}
+
+footer > div > section > a {
+	margin: 0px 5px;
 }
 
 /* ARTICLE */
@@ -105,13 +113,12 @@ article > img {
 
 article p {
 	margin: 30px 0px;
-	line-height: 24px;
+	line-height: 1.6em;
 	text-align: justify;
 }
 
 article blockquote {
 	margin: 30px 0px;
-	line-height: 24px;
 	font-style: italic;
 	padding: 0 1em;
     color: #6a737d;
@@ -123,9 +130,9 @@ article header {
 }
 
 article header h1 {
-	font-size: 34px;
+	font-size: 1.8em;
 	margin-bottom: 12px;
-	line-height: 1.2;
+	line-height: 1.6em;
 }
 
 article header address {
@@ -151,12 +158,12 @@ article > div b {
 }
 
 article > div > h1 {
-	font-size: 28px;
+	font-size: 1.8em;
 	margin-top: 20px;
 }
 
 article > div > h2 {
-	font-size: 22px;
+	font-size: 1.4em;
 	margin-top: 20px;
 }
 
@@ -183,7 +190,7 @@ article ul li {
 }
 
 article li {
-	line-height: 24px;
+	line-height: 1.6em;
 }
 
 article > div img {
@@ -205,15 +212,15 @@ article pre {
 article pre code span,
 article pre code {
 	font-family: "Roboto Mono" !important;
-	font-size: 15px;
-	line-height: 18px;
+	font-size: 0.9rem;
+	line-height: 1.4em;
 }
 
 article code {
 	font-family: "Roboto Mono";
 	background: #f4f4f4;
-	font-size: 15px;
-	line-height: 20px;
+	font-size: 0.9rem;
+	line-height: 1.4em;
 	word-wrap: break-word;
 	color: #E91E63;
 }
@@ -234,8 +241,8 @@ article code {
 	color: #FFF;
 	background: #373B41;
     font-family: "Roboto Mono";
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.9rem;
+    line-height: 1.4em;
 	-webkit-font-smoothing: antialiased;
 	min-width: 0;
     white-space: pre-wrap;
@@ -251,19 +258,20 @@ article code {
 .terminal.lite pre {
     background: #FFF;
 	color: #000;
-	font-family: menlo, "Roboto Mono";
+	font-family: "Roboto Mono";
 }
 
 /* NAVIGATION */
 
 nav h1 {
-    font-size: 1.7em;
+    font-size: 1.6em;
 	margin-top: 1.2em;
 	margin-bottom: 1.2em;
 }
 
 nav li {
-	margin: 16px 0;
+	margin: 14px 0;
+	line-height: 1.4em;
 }
 
 nav a {
@@ -277,12 +285,12 @@ nav span {
 
 nav p {
 	margin: 16px 0px;
-	line-height: 24px;
+	line-height: 1.6em;
 	text-align: justify;
 }
 
 nav div {
-    line-height: 25px;
+	line-height: 1.6em;
     padding-bottom: 10px;
 }
 
@@ -293,7 +301,7 @@ nav div {
 		margin-left: 24px;
 		margin-right: 24px;
 	}
-	body > header ul > li {
+	body > header div > a > span {
 		display: none;
 	}
 	footer {
