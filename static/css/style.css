@@ -19,7 +19,7 @@ body {
 
 body > main {
 	max-width: 600px;
-	margin: 60px auto;
+	margin: 40px auto;
 	flex: 1 1 auto;
 }
 
