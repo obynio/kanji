@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono:300,400');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono');
 
 html {
 	overflow-y: scroll;
@@ -251,15 +251,19 @@ article code {
 /* NAVIGATION */
 
 nav h1 {
-	font-family: "Roboto Mono";
-	font-weight: 300;
-    font-size: 1.6em;
+    font-size: 1.3em;
 	margin-top: 1.2em;
 	margin-bottom: 1.2em;
 }
 
 nav li {
-	margin: 14px 0;
+	margin: 10px;
+	line-height: 1.6em;
+}
+
+nav li > span {
+	float: left;
+	min-width: 60px;
 	line-height: 1.6em;
 }
 

@@ -10,8 +10,8 @@
         <ul>
         {{ range sort .Pages "Date" "desc" }}
         <li>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-          <span class="date">{{ .Date.Format "1/2" }}</span>
+            <span class="date">{{ .Date.Format "Jan 2" }}</span>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
         </li>
         {{ end }}
       </ul>
