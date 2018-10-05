@@ -135,21 +135,8 @@ article header h1 {
 	line-height: 1.6em;
 }
 
-article header address {
-	display: inline-block;
-}
-
-article header address:before {
-	content: "By";
-}
-
 article header time {
 	display: inline-block;
-}
-
-article header time:before {
-	content: "on";
-	margin-right: 6px;
 }
 
 article > div strong,
