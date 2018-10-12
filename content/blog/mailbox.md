@@ -6,7 +6,7 @@ draft: false
 
 My mailbox is located about 200 meters from my house and I must check for new mails every day. So I put my hands dirty and create an SMS notifier with Arduino.
 
-![The hardware](/img/mailbox/preview.jpg)
+![The hardware](/blog/mailbox/preview.jpg)
 
 # The hardware
 
@@ -14,7 +14,7 @@ The system is powered with an Arduino UNO but in order to connect to the GSM net
 
 The assembly isn't that hard, you just need a few components and some basic electronic knowledge. 
 
-![Arduino diagram](/img/mailbox/diagram.jpg)
+![Arduino diagram](/blog/mailbox/diagram.jpg)
 
 The LED and the photoresistor create a barrier in the mailbox. When a mail arrives in the mailbox, the mail "cuts" the barrier and sends a signal to the Arduino board. Then, the Arduino sends an SMS to my phone to notify me that mails arrived.
 
@@ -44,4 +44,4 @@ AT+CMGS="18576608994"   -- Set the number
 Once done, just upload the program to the Arduino and be happy about the result :)
 You can take a look at my work [on my github](https://github.com/obynio/postman). 
 
-![Android sms notification](/img/mailbox/sms.jpg)
+![Android sms notification](/blog/mailbox/sms.jpg)
