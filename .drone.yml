@@ -12,3 +12,4 @@ pipeline:
     secrets: [ ssh_username, ssh_key ]
     when:
       branch: [ master ]
+      event: [ push ]
