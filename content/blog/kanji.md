@@ -13,7 +13,7 @@ Lastly I remembered that I own a blog and figured out that writing new articles 
 
 My old blog was a so painful to update and maintain that I realized I needed to throw it away and migrate to a decent thing.
 
-![Old blog preview](/img/blog/old.jpg)
+![Old blog preview](/blog/kanji/old.jpg)
 
 The codebase was mostly vanilla PHP written during my early days of development. Moreover, redacting a new blog post was quite a challenge as they were redacted in plain HTML. You may agree that's not very convenient...
 
@@ -34,7 +34,7 @@ Hugo is *a fast and modern static website engine*. Just like Jekyll, it carries 
 
 The CI/CD setup is the final touch to all this setup. Luckily, Hugo made the deployment process painless. As all my projects are hosted on Github, I needed a CI/CD pipeline to deploy my blog automatically. There are plenty of them like Travis or CircleCI, however they are not open-source and can not be self-hosted.
 
-![Old blog preview](/img/blog/drone.jpg)
+![Old blog preview](/blog/kanji/drone.jpg)
 
 Finally, I opted for [Drone CI](https://drone.io/), written in Go, open-source and self-hosted. Pipelines can be configured using a simple `.drone.yml` file and they are executed inside containers and isolated from the host machine. On top of that, it supports popular Git platforms such as Github or Bibucket. On the down side, this platform lacks of fonctionnalies compared to popular alternatives such as Jenkins but does the job quite well for personnal projects. And there is a Hugo plugin !
 

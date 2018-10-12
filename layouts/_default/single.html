@@ -1,15 +1,10 @@
-{{ partial "header/header.html" . }}
+{{ define "main" }}
 <article>
 
 <header>
   <h1>{{ .Title }}</h1>
   <div>
-    <address>
-      <a rel="author" href="https://github.com/obynio" target="_blank">
-        obynio
-      </a>
-    </address>
-    <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+    <time>{{ .Date.Format "January 2, 2006" }}</time>
   </div>
 </header>
 
@@ -20,5 +15,4 @@
 </div>
 
 </article>
-
-{{ partial "footer/footer.html" . }}
+{{ end }}

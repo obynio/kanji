@@ -41,7 +41,7 @@ It seems that the headset interacts with my Android via serial port commands. Th
 
 However, I managed to extract useful informations and to group them in the following image. After a few attempts, I managed to successfully communicate with my headset. 
 
-![Reverse diagram](/img/headset/reverse.jpg)
+![Reverse diagram](/blog/headset/reverse.jpg)
 
 Every first connection to the headset must be initiated by sending the bytes **0x00, 0x01, 0x01, 0x00**. Then you have a full access to the headset parameters.
 
@@ -53,4 +53,4 @@ Every first connection to the headset must be initiated by sending the bytes **0
 
 So you have a big bunch of features hidden in the headset firmware. Once you know all these informations, you can easily code an Android app which notify you the battery level of your headset like on iOS :)
 
-![Headset battery app](/img/headset/android.jpg)
+![Headset battery app](/blog/headset/android.jpg)
