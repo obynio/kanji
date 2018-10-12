@@ -1,0 +1,19 @@
+baseUrl: https://obyn.io
+title: obynio's blog
+metaDataFormat: yaml
+googleAnalytics: UA-48413769-8
+
+enableGitInfo: true
+enableRobotsTxt: true
+enableEmoji: true
+
+params:
+  author: Yohann Leon
+  description: A blog by Yohann, because he’s got too much time on his hand
+  email: yohann@leon.re
+
+  social:
+    facebook: https://www.facebook.com/yohann.leon
+    github: https://github.com/obynio
+    linkedin: https://www.linkedin.com/in/yohannleon
+    resume: https://pool.obyn.io/resume-en.pdf
