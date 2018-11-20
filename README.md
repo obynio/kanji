@@ -18,3 +18,4 @@ $ hugo server
 ```
 
 Your website will be available in browser on `localhost:1313`.
+
