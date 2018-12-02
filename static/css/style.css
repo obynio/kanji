@@ -147,11 +147,25 @@ article > div b {
 article > div > h1 {
 	font-size: 1.8em;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 article > div > h2 {
+	font-size: 1.6em;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+article > div > h3 {
 	font-size: 1.4em;
 	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+article > div > h4 {
+	font-size: 1.3em;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 article p:first-of-type {
