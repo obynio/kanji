@@ -18,7 +18,7 @@ body {
 }
 
 body > main {
-	max-width: 600px;
+	max-width: 700px;
 	margin: 40px auto;
 	flex: 1 1 auto;
 }
@@ -324,4 +324,21 @@ nav div {
 		display: block;
 		margin-bottom: 12px;
 	}
+}
+
+/* GLOBE */
+
+#globe {
+	margin-top: 40px;
+}
+
+.pin__circle {
+	fill: #ffffff;
+	stroke: #000000;
+	stroke-width: 1.5;
+}
+
+.pin__line {
+	stroke: #000000;
+	stroke-width: 1.5;
 }

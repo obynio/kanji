@@ -19,3 +19,7 @@ $ hugo server
 
 Your website will be available in browser on `localhost:1313`.
 
+## TODO
+
+* Replace highlight.js by a simpler thing
+* Create an index homepage
