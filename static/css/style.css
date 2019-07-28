@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono|Nunito');
 
 html {
 	overflow-y: scroll;
@@ -212,13 +212,13 @@ article pre {
 
 article pre code span,
 article pre code {
-	font-family: "Roboto Mono" !important;
+	font-family: 'Roboto Mono' !important;
 	font-size: 0.9rem;
 	line-height: 1.4em;
 }
 
 article code {
-	font-family: "Roboto Mono";
+	font-family: 'Roboto Mono';
 	background: #f4f4f4;
 	font-size: 0.9rem;
 	line-height: 1.4em;
@@ -241,7 +241,7 @@ article code {
 .terminal pre {
 	color: #FFF;
 	background: #373B41;
-    font-family: "Roboto Mono";
+    font-family: 'Roboto Mono';
     font-size: 0.9rem;
     line-height: 1.4em;
 	-webkit-font-smoothing: antialiased;
@@ -259,7 +259,7 @@ article code {
 .terminal.lite pre {
     background: #FFF;
 	color: #000;
-	font-family: "Roboto Mono";
+	font-family: 'Roboto Mono';
 }
 
 /* NAVIGATION */
@@ -341,4 +341,11 @@ nav div {
 .pin__line {
 	stroke: #000000;
 	stroke-width: 1.5;
+}
+
+.pin__text {
+	fill: #000000;
+	font-family: 'Nunito';
+	font-size: 1.4rem;
+	transform: translateY(3rem);
 }

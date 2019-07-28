@@ -1,0 +1,32 @@
+[
+    {{ $list := where .Data.Pages "Section" "travels" -}}
+    {{ $length := (len $list) -}}
+    {{ range $index, $element := $list -}}
+
+    {{ if (isset .Params "globe") -}}
+
+    {{ if not (isset .Params.globe "longitude") -}}
+            {{ errorf "Missing globe longitude on page %q" .Path -}}
+    {{ end -}}
+        
+    {{ if not (isset .Params.globe "latitude") -}}
+            {{ errorf "Missing globe latitude on page %q" .Path -}}
+    {{ end -}}
+        
+    {{ if not (isset .Params.globe "name") -}}
+            {{ errorf "Missing globe name on page %q" .Path -}}
+    {{ end -}}
+        
+    {{ if not (isset .Params.globe "icon") -}}
+            {{ errorf "Missing globe icon %q" .Path -}}
+    {{ end -}}
+
+    {
+        "longitude": "{{ .Params.globe.longitude }}",
+        "latitude": "{{ .Params.globe.latitude }}",
+        "id": "{{ .Params.globe.name }}",
+        "img": "{{ .Params.globe.icon }}"
+    }{{ if ne (add $index 1) $length -}},{{ end }}
+    {{ end -}}
+    {{ end }}
+]

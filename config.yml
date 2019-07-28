@@ -6,6 +6,10 @@ googleAnalytics: UA-48413769-8
 enableRobotsTxt: true
 enableEmoji: true
 
+outputs:
+  home: ["HTML","RSS", "JSON"]
+
+
 params:
   author: Yohann Leon
   description: A blog by Yohann, because he’s got too much time on his hand

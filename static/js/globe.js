@@ -37,7 +37,7 @@ svg.call(drag);
 function drawGlobe() {
     d3.queue()
         .defer(d3.json, '/js/world.json')
-        .defer(d3.json, '/js/locations.json')
+        .defer(d3.json, '/index.json')
         .await((error, worldData, locationData) => {
             svg.append('path')
             .datum(topojson.feature(worldData, worldData.objects.land))
@@ -83,13 +83,52 @@ function resumeRotation() {
 // Over function to be called on mouseover
 function over(d, i) {
     pauseRotation();
-    d3.select(this).attr('r', 25).style('fill', 'white');
+    d3
+        .select('g')
+        .append('text')
+        .text(d.id)
+        .attr('class', 'pin__text')
+        .attr('text-anchor', 'middle')
+        .attr('x', projectionOrbit([d.longitude, d.latitude])[0])
+        .attr('y', projectionOrbit([d.longitude, d.latitude])[1]);
+
+    d3
+        .select('g')
+        .append('defs')
+        .append('pattern')
+        .attr('id', d.id)
+        .attr('width', 1)
+        .attr('height', 1)
+        .append('image')
+        .attr('href', d.img)
+        .attr('x', 0)
+        .attr('y', 0)
+        .attr('width', 50)
+        .attr('height', 50)
+
+    d3
+        .select(this)
+        .attr('r', 25)
+        .style('fill', 'url(#' +  d.id + ')');
 }
 
 // Out function to be called on mouseout
 function out(d, i) {
     resumeRotation();
-    d3.select(this).attr('r', 8).style('fill', null);
+    d3
+        .select(this)
+        .attr('r', 8)
+        .style('fill', null);
+
+    d3
+        .select('g')
+        .selectAll('text')
+        .remove();
+
+    d3
+        .select('g')
+        .selectAll('defs')
+        .remove();
 }
 
 function drawMarkers() {
