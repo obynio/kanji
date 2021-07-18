@@ -1,18 +1,17 @@
-baseUrl: https://obyn.io
-title: obynio's blog
+baseUrl: https://leon.re
+title: レオン
 metaDataFormat: yaml
 googleAnalytics: UA-48413769-8
-
 enableRobotsTxt: true
 enableEmoji: true
 
 params:
   author: Yohann Leon
   description: A blog by Yohann, because he’s got too much time on his hand
-  email: yohann@leon.re
+  email: sybiload@gmail.com
 
   social:
-    facebook: https://www.facebook.com/yohann.leon
     github: https://github.com/obynio
     linkedin: https://www.linkedin.com/in/yohannleon
-    resume: https://obyn.io/resume.pdf
+    instagram: https://www.instagram.com/yohann
+    twitter: https://www.twitter.com/obynio
