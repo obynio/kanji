@@ -1,7 +1,10 @@
 {{ define "main" }}
 <nav>
     <div>
-      <p>Hi! I'm Yohann, a french computer science student. Here I write about coding, devops things, open-source stuff and other experiences in technology.</p>
+      <p>
+      I'm currently working as a Site Reliability Engineer at Algolia, ensuring everything runs smoothly. 
+      And when I have too much time on my hand, I write about coding, infrastructure things, open-source stuff and other experiences in technology.
+      </p>
     </div>
 
     {{ range (where .Data.Pages "Section" "blog").GroupByDate "2006" "desc" }}
