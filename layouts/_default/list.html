@@ -7,7 +7,7 @@
       </p>
     </div>
 
-    {{ range (where .Data.Pages "Section" "blog").GroupByDate "2006" "desc" }}
+    {{ range .Data.Pages.GroupByDate "2006" "desc" }}
         <h1>{{ .Key }}</h1>
         <ul>
         {{ range sort .Pages "Date" "desc" }}
