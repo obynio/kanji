@@ -13,8 +13,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Noto Sans';
-	font-size: 1em;
-	color: #263238;
+	font-size: 1.1em;
+	color:#10072c
 }
 
 body > main {

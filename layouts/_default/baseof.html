@@ -27,7 +27,7 @@
           <a class="active" href="#">Blog</a>
         </li>
         <li>
-          <a href="#">Talks</a>
+          <a href="#">Photo</a>
         </li>
         <li>
           <a href="#">About</a>
@@ -56,9 +56,8 @@
   <footer>
     <div>
       <section>
-        <h3>{{ .Site.Params.Author }} ·
-          <script>document.write((new Date()).getFullYear())</script>
-        </h3>
+        {{ .Site.Params.Author }} ·
+        <script>document.write((new Date()).getFullYear())</script>
       </section>
       <section>
         <a href="{{ .Site.Params.Social.Github }}" target="_blank">{{ partial "svg/github.svg" (dict "fill" "#263238" "size" 18) }}</a>
