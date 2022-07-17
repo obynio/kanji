@@ -1,22 +1,17 @@
 {{ define "main" }}
 <nav>
-    <div>
-      <p>
-        Usually, you can find me at my desk, sipping my cafe con leche while reading the latest headlines on Hacker News.
-      </p>
+    <div class="intro">
+      <h1>Blog<span class="dot">.</span></h1>
     </div>
 
-    {{ range .Data.Pages.GroupByDate "2006" "desc" }}
-        <h1>{{ .Key }}</h1>
-        <ul>
-        {{ range sort .Pages "Date" "desc" }}
-
-        <li>
-            <span class="date">{{ .Date.Format "Jan 2" }}</span>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-      </ul>
-    {{ end }}
+    {{ range .Pages }}
+<div class="summary">
+<div class="summary-date">{{ .Date.Format "Jan 2, 2006" }}</div>
+<h2 class="summary-title">
+  <a href="{{.Permalink}}">{{.Title}}</a>
+</h2>
+<p class="summary-description">{{.Description}}</p>
+</div>
+{{ end }}
 </nav>
 {{ end }}

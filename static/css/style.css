@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600');
 html {
 	overflow-y: scroll;
 }
@@ -12,22 +12,15 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
-	font-family: 'Noto Sans';
+	font-family: 'Helvetica';
 	font-size: 1.1em;
-	color:#10072c
-}
-
-body > main {
-	max-width: 600px;
-	margin: 40px auto;
-	flex: 1 1 auto;
+	color:#263238;
 }
 
 /* HEADER */
 
 body > header {
-	/* border-bottom: 1px solid #EEE; */
-	padding: 16px 0px;
+	padding: 30px 0px;
 }
 
 body > header > div {
@@ -43,9 +36,8 @@ header .logo {
 }
 
 header .logo a {
+	font-size: 1.1em;
 	color: #263238;
-	text-decoration: none;
-	font-size: 1.2em;
 }
 
 header .logo svg {
@@ -103,7 +95,59 @@ footer > div > section > a {
 	margin: 0px 5px;
 }
 
+/* LIST */
+
+body > main > nav {
+	max-width: 900px;
+	margin: 0px auto;
+}
+
+.dot {
+	color: #7b16ff;
+}
+
+.intro h1 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	font-size: 88px;
+	line-height: 94px;
+	margin-bottom: 50px;
+}
+
+.summary {
+	margin-bottom: 80px;
+	font-size: 18px;
+	line-height: 26px;
+}
+
+.summary .summary-date {
+	color: var(--heading-color);
+	font-weight: bold;
+}
+
+.summary .summary-title {
+	margin: 0.2em 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	font-size: 52px;
+	line-height: 58px;
+}
+
+a {
+	text-decoration: none;
+	color: #7b16ff;
+}
+
+p {
+	color: #4e5157
+}
+
 /* ARTICLE */
+
+article {
+	max-width: 900px;
+	margin: 0px auto;
+}
 
 article > img {
 	max-width: 100%;
@@ -260,68 +304,4 @@ article code {
     background: #FFF;
 	color: #000;
 	font-family: "Roboto Mono";
-}
-
-/* NAVIGATION */
-
-nav h1 {
-    font-size: 1.3em;
-	margin-top: 1.2em;
-	margin-bottom: 1.2em;
-}
-
-nav li {
-	margin: 10px;
-	line-height: 1.6em;
-	white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-nav li > span {
-	float: left;
-	min-width: 60px;
-	line-height: 1.6em;
-}
-
-nav a {
-    color: inherit;
-	text-decoration: none;
-}
-
-nav span {
-	color: #9E9E9E;
-}
-
-nav p {
-	margin: 16px 0px;
-	line-height: 1.6em;
-	text-align: justify;
-}
-
-nav div {
-	line-height: 1.6em;
-    padding-bottom: 10px;
-}
-
-/* SCREENS */
-
-@media screen and (max-width: 950px) {
-	body > main {
-		margin-left: 24px;
-		margin-right: 24px;
-	}
-	body > header div > a > span {
-		display: none;
-	}
-	footer {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 500px) {
-	body > aside ul > li {
-		display: block;
-		margin-bottom: 12px;
-	}
 }
